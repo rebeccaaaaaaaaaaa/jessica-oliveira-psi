@@ -16,7 +16,7 @@ const Footer = () => {
 
   const socialLinks = [
     { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/psico.jessicaoliveira/" },
-    { name: "YouTube", icon: Youtube, href: "#" },
+    { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/@psico.jessicaoliveira" },
   ];
 
   const footerNavLinks = [
