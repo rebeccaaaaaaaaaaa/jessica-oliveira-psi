@@ -21,7 +21,6 @@ const Footer = () => {
 
   const footerNavLinks = [
     { name: "Política de Privacidade", path: "/politica-de-privacidade" },
-    { name: "Termos de Uso", path: "/termos-de-uso" }, // Example link
   ];
 
   return (
@@ -58,14 +57,6 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  to="/contato"
-                  className="text-sm hover:text-primary transition-colors"
-                >
-                  Contato
-                </Link>
-              </li>
             </ul>
           </div>
           <div>
