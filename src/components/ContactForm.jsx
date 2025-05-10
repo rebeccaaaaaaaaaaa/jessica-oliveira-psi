@@ -40,26 +40,33 @@ const ContactForm = ({ formTitle, successMessage, storageKey, buttonText }) => {
     },
   });
 
-  function onSubmit(values) {
-    try {
-      const existingEntries = JSON.parse(localStorage.getItem(storageKey) || '[]');
-      existingEntries.push({...values, submittedAt: new Date().toISOString()});
-      localStorage.setItem(storageKey, JSON.stringify(existingEntries));
+async function onSubmit(values) {
+  try {
+    const response = await fetch('/send-form.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams(values),
+    });
 
+    if (response.ok) {
       toast({
         title: 'Sucesso!',
-        description: successMessage || 'Seu formulário foi enviado.',
-        variant: 'default',
+        description: successMessage || 'Seu formulário foi enviado por e-mail.',
       });
       form.reset();
-    } catch (error) {
-      toast({
-        title: 'Erro!',
-        description: 'Houve um problema ao enviar seu formulário. Tente novamente.',
-        variant: 'destructive',
-      });
+    } else {
+      throw new Error('Erro ao enviar');
     }
+  } catch (error) {
+    toast({
+      title: 'Erro!',
+      description: 'Houve um problema ao enviar o formulário. Tente novamente.',
+      variant: 'destructive',
+    });
   }
+}
 
   return (
     <motion.div
