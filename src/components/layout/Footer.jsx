@@ -86,7 +86,7 @@ const Footer = () => {
                 jessica.oliveira.psi@example.com
               </a>
               <a
-                href="https://wa.me/55XXXXXXXXXXX"
+                href="https://wa.me/5517991912983"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center hover:text-primary transition-colors"

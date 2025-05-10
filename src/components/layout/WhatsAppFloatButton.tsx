@@ -1,7 +1,7 @@
 import React from "react";
 
 const WhatsAppFloatButton = () => {
-  const phoneNumber = "5599999999999"; // Substitua pelo número com DDI e DDD
+  const phoneNumber = "5517991912983"; // Substitua pelo número com DDI e DDD
   const message = "Olá! Gostaria de mais informações.";
 
   return (

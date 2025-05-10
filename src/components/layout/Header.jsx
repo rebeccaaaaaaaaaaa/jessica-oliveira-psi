@@ -52,7 +52,7 @@ const Header = () => {
         <div className="flex items-center space-x-2">
           <Button variant="outline" asChild className="hidden lg:inline-flex">
            <a
-              href={`https://wa.me/55555555555?text=Olá, gostaria de saber mais sobre seus serviços.`}
+              href={`https://wa.me/5517991912983?text=Olá, gostaria de saber mais sobre seus serviços.`}
               target="_blank"
               rel="noopener noreferrer"
               title="Fale conosco pelo WhatsApp"

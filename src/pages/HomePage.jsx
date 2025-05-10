@@ -151,7 +151,7 @@ const HomePage = () => {
                     </CardDescription>
                     <div className="text-center mt-4">
                       <Button variant="outline" asChild>
-                        <Link to="https://wa.me/55555555555?text=Olá, gostaria de saber mais sobre seus serviços.">Fale comigo</Link>
+                        <Link to="https://wa.me/5517991912983?text=Olá, gostaria de saber mais sobre seus serviços.">Fale comigo</Link>
                       </Button>
                     </div>
                   </CardContent>
