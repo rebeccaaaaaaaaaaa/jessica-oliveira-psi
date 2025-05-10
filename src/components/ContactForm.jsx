@@ -42,7 +42,7 @@ const ContactForm = ({ formTitle, successMessage, storageKey, buttonText }) => {
 
 async function onSubmit(values) {
   try {
-    const response = await fetch('/send-form.php', {
+    const response = await fetch('send-form.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
