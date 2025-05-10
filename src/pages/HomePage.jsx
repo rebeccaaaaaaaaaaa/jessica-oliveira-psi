@@ -59,9 +59,9 @@ const HomePage = () => {
             </motion.p>
             <motion.div variants={itemVariants}>
               <Button
-                size="lg"
+                size="are-medium"
                 asChild
-                className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity text-lg px-8 py-6"
+                className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity text-lg px-8 py-3"
               >
                 <Link to="/intervisao">
                   Quero conhecer as Intervisões Clínicas
