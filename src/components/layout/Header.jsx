@@ -51,9 +51,15 @@ const Header = () => {
         
         <div className="flex items-center space-x-2">
           <Button variant="outline" asChild className="hidden lg:inline-flex">
-            <Link to="/contato">
-              <MessageSquare className="mr-2 h-4 w-4" /> Fale Comigo
-            </Link>
+           <a
+              href={`https://wa.me/55555555555?text=Olá, gostaria de saber mais sobre seus serviços.`}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Fale conosco pelo WhatsApp"
+              className="bg-green-500 hover:bg-green-600 hover:text-white text-white transition-all duration-300 flex items-center justify-center"
+            >
+              Fale Comigo
+            </a>
           </Button>
           <Button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden" variant="ghost" size="icon">
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

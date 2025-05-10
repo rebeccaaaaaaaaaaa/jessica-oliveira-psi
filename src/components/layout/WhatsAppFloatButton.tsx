@@ -18,7 +18,7 @@ const WhatsAppFloatButton = () => {
         target="_blank"
         rel="noopener noreferrer"
         title="Fale conosco pelo WhatsApp"
-        className="bg-green-500 hover:bg-green-600 text-white transition-all duration-300 flex items-center justify-center"
+        className="bg-green-500 hover:bg-green-600 text-white rounded-full  transition-all duration-300 flex items-center justify-center"
       >
         <img src="/whatslogo.png" alt="WhatsApp" className="w-20 h-20" />
       </a>
