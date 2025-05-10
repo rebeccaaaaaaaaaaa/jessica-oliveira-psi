@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: http://psicojessicaoliveira.com.br/sitemap.xml
+Disallow: /ammika.php?
