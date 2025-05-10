@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MessageSquare } from "lucide-react";
 const AboutPage = () => {
@@ -36,7 +36,7 @@ const AboutPage = () => {
           variants={itemVariants}
           className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary mb-4"
         >
-          Sobre Mim – Jéssica Oliveira
+          Sobre Mim
         </motion.h1>
         <motion.p
           variants={itemVariants}
@@ -133,7 +133,7 @@ const AboutPage = () => {
               crítico e socialmente comprometido sobre a clínica.
             </p>
           </motion.div>
-          <motion.div variants={itemVariants} className="md:col-span-2">
+          <motion.div variants={itemVariants} className="md:col-span-2 hidden lg:block">
             <img
               className="rounded-lg shadow-xl object-cover w-full h-auto md:h-[auto]"
               alt="Psicóloga Jéssica Oliveira"
@@ -145,7 +145,7 @@ const AboutPage = () => {
 
       <section className="mb-12 md:mb-16">
         <div className="grid md:grid-cols-5 gap-8 items-center">
-          <motion.div variants={itemVariants} className="md:col-span-2">
+          <motion.div variants={itemVariants} className="md:col-span-2 hidden lg:block">
             <img
               className="rounded-lg shadow-xl object-cover w-full h-auto md:h-[auto]"
               alt="Psicóloga Jéssica Oliveira"
@@ -215,7 +215,7 @@ const AboutPage = () => {
               </Link>
             </Button>
           </motion.div>
-                    <motion.div variants={itemVariants} className="md:col-span-2">
+          <motion.div variants={itemVariants} className="md:col-span-2 hidden lg:block">
             <img
               className="rounded-lg shadow-xl object-cover w-full h-auto md:h-[auto]"
               alt="Psicóloga Jéssica Oliveira"
