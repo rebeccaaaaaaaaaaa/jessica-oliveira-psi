@@ -14,7 +14,7 @@ import { cn } from '@/lib/utils';
 
 const navItems = [
   { name: 'Início', path: '/', icon: Home },
-  { name: 'Sobre', path: '/sobre', icon: Info },
+  { name: 'Sobre mim', path: '/sobre', icon: Info },
   { name: 'Intervisão Clínica', path: '/intervisao', icon: Users },
   { name: 'Cursos e Eventos', path: '/cursos-eventos', icon: BookUser },
   { name: 'Blog', path: '/blog', icon: Newspaper },
