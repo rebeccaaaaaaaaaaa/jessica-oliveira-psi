@@ -49,8 +49,6 @@ const BlogPostPage = () => {
     );
   }
 
-  const formattedContent = post.conteudo.replace(/\n/g, "<br />");
-
   return (
     <main className="container mx-auto px-4 py-12 md:py-20">
       <header className="text-center mb-12 md:mb-16">
@@ -68,7 +66,9 @@ const BlogPostPage = () => {
         )}
         <div
           className="prose max-w-none"
-          dangerouslySetInnerHTML={{ __html: formattedContent }}
+          dangerouslySetInnerHTML={{
+            __html: post.conteudo.replace(/\n/g, "<br />"),
+          }}
         />
         <div
           className="flex items-center justify-between"

@@ -105,4 +105,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--primary));
 }
-  
+
+ol, ul {
+  list-style: inside !important;
+}
