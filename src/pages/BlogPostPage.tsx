@@ -49,6 +49,8 @@ const BlogPostPage = () => {
     );
   }
 
+  const formattedContent = post.conteudo.replace(/\n/g, "<br />");
+
   return (
     <main className="container mx-auto px-4 py-12 md:py-20">
       <header className="text-center mb-12 md:mb-16">
@@ -66,11 +68,14 @@ const BlogPostPage = () => {
         )}
         <div
           className="prose max-w-none"
-          dangerouslySetInnerHTML={{ __html: post.conteudo }}
+          dangerouslySetInnerHTML={{ __html: formattedContent }}
         />
-        <div className="flex items-center justify-between mt-6 mb-4">
-          <p className="text-sm text-gray-500 mb-6">
-            Publicado em:{" "}
+        <div
+          className="flex items-center justify-between"
+          style={{ marginTop: "10rem" }}
+        >
+          <p className="text-sm text-gray-500  mt-6 mb-6">
+            Publicado em:
             {new Date(post.data_publicacao).toLocaleDateString("pt-BR", {
               year: "numeric",
               month: "long",

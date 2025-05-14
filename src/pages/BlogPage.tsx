@@ -113,6 +113,11 @@ const BlogPage = () => {
           </button>
         </div>
       )}
+      {posts.length === 0 && (
+        <div className="flex items-center justify-center">
+          <p className="text-lg text-gray-600">Nenhum post encontrado.</p>
+        </div>
+      )}
     </main>
   );
 };
