@@ -74,6 +74,7 @@ const BlogPage = () => {
             className="grid md:grid-cols-2 gap-6 items-center shadow-md rounded-lg overflow-hidden bg-white"
             style={{ cursor: "pointer" }}
             key={post.id}
+            onClick={() => (window.location.href = `/blog/${post.id}`)}
           >
             <div className="p-4">
               <h3 className="text-lg text-gray-500 mb-6">{post.titulo}</h3>
