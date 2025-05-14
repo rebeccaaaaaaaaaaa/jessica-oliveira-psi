@@ -1,1 +1,2 @@
-export const BASE_URL = "http://psicojessicaoliveira-admin.test";
+export const BASE_URL =
+  "https://psicojessicaoliveira.com.br/admin/noticias-api";
