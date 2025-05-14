@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { BASE_URL } from "../services/baseUrl";
 
 interface Post {
   id: number;
@@ -31,9 +32,7 @@ const BlogPage = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch(
-          "http://psicojessicaoliveira-admin.test/noticias-api/get-all.php"
-        );
+        const response = await fetch(`${BASE_URL}/noticias-api/get-all.php`);
         const data = await response.json();
         setPosts(data);
       } catch (error) {
@@ -63,7 +62,7 @@ const BlogPage = () => {
       <header className="text-center mb-12 md:mb-16">
         <motion.h1
           variants={itemVariants}
-          className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary mb-4"
+          className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary mb-4"
         >
           Blog
         </motion.h1>
@@ -77,8 +76,8 @@ const BlogPage = () => {
             key={post.id}
           >
             <div className="p-4">
-              <h3 className="text-lg font-semibold mb-1">{post.titulo}</h3>
-              <p className="text-sm text-gray-500 mb-2">
+              <h3 className="text-lg text-gray-500 mb-6">{post.titulo}</h3>
+              <p className="text-sm text-gray-500 mb-6">
                 {new Date(post.data_publicacao).toLocaleDateString("pt-BR", {
                   year: "numeric",
                   month: "long",
@@ -87,7 +86,7 @@ const BlogPage = () => {
               </p>
               <a
                 href={`/blog/${post.id}`}
-                className="inline-block text-primary font-medium hover:underline"
+                className="text-primary font-medium hover:text-primary-dark transition"
               >
                 Ver mais
               </a>
@@ -95,7 +94,7 @@ const BlogPage = () => {
             {post.imagem && (
               <motion.img
                 variants={featureVariants(index)}
-                src={`http://psicojessicaoliveira-admin.test/${post.imagem}`}
+                src={`${BASE_URL}/${post.imagem}`}
                 alt={post.titulo}
                 className="w-full h-48 object-cover"
               />
@@ -108,7 +107,7 @@ const BlogPage = () => {
         <div className="flex justify-center">
           <button
             onClick={handleLoadMore}
-            className="py-5font-medium rounded hover:bg-primary-dark transition"
+            className="py-5 font-medium rounded hover:bg-primary-dark transition"
           >
             Carregar mais
           </button>
