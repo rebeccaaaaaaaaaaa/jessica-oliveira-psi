@@ -16,12 +16,9 @@ const AboutPage = lazy(() => import("@/pages/AboutPage"));
 const IntervisionPage = lazy(() => import("@/pages/IntervisionPage"));
 const PrivacyPolicyPage = lazy(() => import("@/pages/PrivacyPolicyPage"));
 const NotFoundPage = lazy(() => import("@/pages/NotFoundPage"));
-// Placeholder pages - to be implemented later
 const CoursesEventsPage = lazy(() => import("@/pages/PlaceholderPage"));
-const BlogPage = lazy(() => import("@/pages/PlaceholderPage"));
-const NewsletterPage = lazy(() => import("@/pages/PlaceholderPage"));
-const ContactPage = lazy(() => import("@/pages/PlaceholderPage"));
-
+const BlogPage = lazy(() => import("@/pages/BlogPage"));
+const BlogPostPage = lazy(() => import("@/pages/BlogPostPage"));
 const LoadingFallback = () => (
   <div className="flex justify-center items-center h-screen">
     <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
@@ -69,11 +66,7 @@ function App() {
             }
           />
           <Route path="/blog" element={<BlogPage pageName="Blog" />} />
-          <Route
-            path="/newsletter"
-            element={<NewsletterPage pageName="Newsletter" />}
-          />
-          <Route path="/contato" element={<ContactPage pageName="Contato" />} />
+          <Route path="/blog/:id" element={<BlogPostPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </PageLayout>
