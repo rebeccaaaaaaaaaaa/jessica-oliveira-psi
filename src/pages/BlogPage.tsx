@@ -88,7 +88,7 @@ const BlogPage = () => {
                 href={`/blog/${post.id}`}
                 className="text-primary font-medium hover:text-primary-dark transition"
               >
-                Ver mais
+                Ler mais
               </a>
             </div>
             {post.imagem && (
