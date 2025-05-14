@@ -56,7 +56,7 @@ const BlogPostPage = () => {
           {post.titulo}
         </h1>
       </header>
-      <article className="max-w-3xl mx-auto">
+      <article className="max-w-3xl mx-auto content">
         {post.imagem && (
           <img
             src={`${BASE_URL}/${post.imagem}`}
@@ -71,7 +71,7 @@ const BlogPostPage = () => {
           }}
         />
         <div
-          className="flex items-center justify-between"
+          className="flex items-center justify-between "
           style={{ marginTop: "10rem" }}
         >
           <p className="text-sm text-gray-500  mt-6 mb-6">

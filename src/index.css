@@ -106,6 +106,6 @@
   background: hsl(var(--primary));
 }
 
-ol, ul {
+.content ul {
   list-style: inside !important;
 }
